@@ -1,0 +1,90 @@
+* {
+  box-sizing: border-box;
+}
+ /* div for the select */
+
+/* select tag */
+/* select {
+background-color: #53B8BB;
+width: 100%;
+
+border: 3px solid #53B8BB; }*/
+
+
+/* categories style */
+/* optgroup {
+  background-color: #53B8BB;
+  width: 100%;
+  padding: 5%;
+  border: 3px solid #53B8BB; 
+  
+
+} */
+
+/* option styles after the render in js */
+
+
+
+
+
+h1 {
+  text-align: center;
+  border: 3px solid #3C8DAD;
+  padding: 10px;
+  border-radius: 25px;
+}
+/* for select */
+/* #hide-option {
+  display:none;
+} */
+
+main{
+  text-align: center;
+}
+h1{
+  text-align: center;
+  color: darkblue;
+}
+h2{
+  color: darkblue;
+}
+h3{
+  color: rgb(107, 107, 224);
+}
+h4{
+  color: #F68C1E;
+}
+p{
+  color: black;
+}
+img{
+  width: 170px;
+  height: 170px;
+  border: solid black 1px;
+}
+span {
+  display: inline-block;
+  border: solid #F68C1E 0.2px;
+  /* float: left; */
+  width: 25%;
+  padding:20px;
+  box-shadow: 0 4px 8px 0 #012F6B;
+  margin-left: 3%;
+}
+button{
+  width: 200px;
+  height: 50px; 
+  background-color: #012F6B;
+  color: white;
+  font-weight: bold;
+  font-size: 15px;
+  border: none;
+  border-radius: 30px;
+}
+button:hover {
+  box-shadow: 0 12px 16px 0 red;
+  font-size: 20px;
+}  
+
+
+
