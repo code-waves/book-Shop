@@ -98,32 +98,92 @@ for (let i = 0; i < Book.allbooks.length; i++) {
 
 // create and show books in the store page
 
+
+// create and show books in the store page
+let input;
+let cartArray=[];
+
 Book.prototype.renderBooks = function () {
-    for (let i = 0; i < Book.allbooks.length; i++) {
-        let span = document.createElement('span');
-        main.appendChild(span);
-        let imgelement1 = document.createElement('img');
-        imgelement1.setAttribute('src',  Book.allbooks[i].src);
-        span.appendChild(imgelement1);
-        console.log(Book.allbooks[i].src);
-        let h2category = document.createElement('h2');
-        span.appendChild(h2category);
-        h2category.textContent = Book.allbooks[i].category;
-        let pBookName = document.createElement('h3');
-        span.appendChild(pBookName);
-        pBookName.textContent = Book.allbooks[i].name;
-        let pBookPrice = document.createElement('h4');
-        span.appendChild(pBookPrice);
-        pBookPrice.textContent = Book.allbooks[i].price;
-        let pBookdescrption = document.createElement('p');
-        span.appendChild(pBookdescrption);
-        pBookdescrption.textContent = Book.allbooks[i].aboutBook;
-        let button = document.createElement('button');
-        span.appendChild(button);
-        button.textContent = "Add To Cart";
+
+    // for (let i = 0; i < books.length; i++) {
+    let span = document.createElement('span');
+    main.appendChild(span);
+    let imgelement1 = document.createElement('img');
+    imgelement1.setAttribute('src', this.src);
+    span.appendChild(imgelement1);
+    // console.log(books[i].src);
+    let h2category = document.createElement('h2');
+    span.appendChild(h2category);
+    h2category.textContent = this.category;
+    let pBookName = document.createElement('h3');
+    span.appendChild(pBookName);
+    pBookName.textContent = this.name;
+    let pBookPrice = document.createElement('h4');
+    span.appendChild(pBookPrice);
+    pBookPrice.textContent = this.price;
+    let pBookdescrption = document.createElement('p');
+    span.appendChild(pBookdescrption);
+    pBookdescrption.textContent = this.aboutBook;
+
+    // butoon event listener
+
+    input = document.createElement('button');
+    span.appendChild(input)
+    input.textContent = "Add To Cart";
+    //    console.log(input);
+    let object=this
+    input.addEventListener('click', userClick);
+    function userClick(event) {
+        // console.log(event.target.value);
+        // console.log(object);
+
+        cartArray.push(object);
+        console.log(cartArray);
+        cartArrayStorge();
     }
+    // } 
+
+
+
+
 }
-Book.prototype.renderBooks();
+for (let i = 0; i < Book.allbooks.length; i++) {
+    Book.allbooks[i].renderBooks();
+    
+}
+
+
+
+ //event listener for each button
+
+
+
+function cartArrayStorge() {
+    
+    let strigcartArr=JSON.stringify(cartArray);
+    localStorage.setItem('selected books',strigcartArr);
+    }
+  
+
+    // get arry from local storage books arry
+
+    // function getStorageData(){
+    //     let data=localStorage.getItem('books');
+    //     console.log(data);
+    //     let parseArr=JSON.parse(data);
+    //     console.log(parseArr);
+    //     if (parseArr!==null) {
+    //       books=parseArr;
+    //     }
+    
+    //     Book.prototype.renderBooks();
+    //   }
+    
+    //   getStorageData();
+
+
+
+
 
 
 
