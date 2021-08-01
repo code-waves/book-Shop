@@ -1,5 +1,5 @@
 'use strict';
-
+// w3 school
 let slideIndex = 1;
 showSlides(slideIndex);
 

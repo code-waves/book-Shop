@@ -55,6 +55,24 @@ input:hover{
 
 
 
+table,th,td {
+    font-family: 'Verdana', sans-serif;
+    border: solid rgb(0, 0, 0) 1px;
+    border-collapse: collapse;
+    text-align: center;
+    padding: 17px;
+    
+} 
+th{
+    color: rgb(51, 214, 18);
+}
+td{
+    color: rgb(224, 224, 226);
+}
+ img{
+     width: 150px;
+     height: 150px;
+ }
 
 
 
