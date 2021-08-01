@@ -17,7 +17,7 @@ The site is a place for selling electronic books, the site shows the name of the
 
 - Semantic versioning : version 1.0.0
 
-**[v.1.0.0] 1/8/2021**  
+**[v.1.0.1] 1/8/2021**  
 &nbsp;
 &nbsp;
 
