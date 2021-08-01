@@ -14,7 +14,11 @@ header{
     
 }
 
-
+p {
+font-size: 30px;
+color:#334257;
+text-align: center;
+}
 
 nav {
     margin: 0px auto;
