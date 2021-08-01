@@ -16,3 +16,11 @@ Yousef alramli
 The site is a place for selling electronic books, the site shows the name of the book, its classification and price, the user can buy the book by choosing the books he wants, then enter his name, number, address and send the request
 
 - Semantic versioning : version 1.0.0
+
+**[v.1.0.1] 1/8/2021**  
+&nbsp;
+&nbsp;
+
+  **Added**  
+- Add Overly feature
+
