@@ -72,6 +72,34 @@ function getStorageData() {
       trItem.appendChild(thPrice);
       thPrice.textContent = cartItem[i].price;
 
+      let thButton = document.createElement('th');
+      trItem.appendChild(thButton);
+      let input = document.createElement('button');
+      thButton.appendChild(input);
+      input.textContent = "Clear";
+
+    input.addEventListener('click', clear);
+    function clear(event) {
+
+        event.preventDefault();
+
+        table.deleteRow(cartItem[i]);
+
+  localStorage.removeItem("selected books");
+  cartItem.splice(cartItem, 1);
+  localStorage.setItem("selected books", JSON.stringify(cartItem));
+        
+    }
+
+    let thQuantity = document.createElement('th');
+      trItem.appendChild(thQuantity);
+      thQuantity.textContent = 0;
+      for (let j = 0; j < cartItem.length; j++) {
+        if (cartItem[i].name == cartItem[j].name) {
+          thQuantity.textContent++;
+        }
+      }
+
 
     }
 
