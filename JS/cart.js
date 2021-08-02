@@ -22,8 +22,18 @@ function userReview(event) {
   let firstName = event.target.firstName.value;
   let lastName = event.target.lastName.value;
   let age = parseInt(event.target.age.value);
-  let feedback = event.target.feedback.value;    
+  let feedback = event.target.feedback.value;
   let addFeedback = new updateReview(firstName, lastName, age, feedback);
+  localStorage.removeItem('selected books');
+  table.textContent = '';
+  Swal.fire({
+    position: 'top-end',
+    icon: 'success',
+    title: `Thank you ${firstName + ' ' + lastName} for purchase, The delivery department will contact you `,
+    showConfirmButton: false,
+    timer: 2000
+  })
+  
   console.log(addFeedback);
   updateStorge();
 }
@@ -32,10 +42,10 @@ console.log(updateReview.all);
 
 
 //Saving from updateReview function
-function updateStorge() {    
-updateReview.all = JSON.stringify(updateReview.all);  
-localStorage.setItem('userfeedback', updateReview.all);
-updateReview.all = JSON.parse(updateReview.all);
+function updateStorge() {
+  updateReview.all = JSON.stringify(updateReview.all);
+  localStorage.setItem('userfeedback', updateReview.all);
+  updateReview.all = JSON.parse(updateReview.all);
 
 }
 
@@ -52,6 +62,23 @@ function getStorageData() {
   let cartItem = JSON.parse(localStorage.getItem('selected books'));
   console.log(cartItem);
   if (cartItem !== null) {
+    let trhead = document.createElement('tr')
+    table.appendChild(trhead)
+    let imgHead = document.createElement('th')
+    let nameHead = document.createElement('th')
+    let priceHead = document.createElement('th')
+    let quantityHead = document.createElement('th')
+    let actionHead = document.createElement('th')
+    trhead.appendChild(imgHead)
+    trhead.appendChild(nameHead)
+    trhead.appendChild(priceHead)
+    trhead.appendChild(quantityHead)
+    trhead.appendChild(actionHead)
+    imgHead.textContent = 'Image of the book'
+    nameHead.textContent = 'Nook name'
+    priceHead.textContent = 'Price in JD'
+    quantityHead.textContent = 'Quantity'
+    actionHead.textContent = 'Remove'
     for (let i = 0; i < cartItem.length; i++) {
       // console.log(cartItem[i]);
       //   cartItem[i].name;
@@ -78,20 +105,20 @@ function getStorageData() {
       thButton.appendChild(input);
       input.textContent = "Clear";
 
-    input.addEventListener('click', clear);
-    function clear(event) {
+      input.addEventListener('click', clear);
+      function clear(event) {
 
         event.preventDefault();
 
         table.deleteRow(cartItem[i]);
 
-  localStorage.removeItem("selected books");
-  cartItem.splice(cartItem, 1);
-  localStorage.setItem("selected books", JSON.stringify(cartItem));
-        
-    }
+        localStorage.removeItem("selected books");
+        cartItem.splice(cartItem, 1);
+        localStorage.setItem("selected books", JSON.stringify(cartItem));
 
-    let thQuantity = document.createElement('th');
+      }
+
+      let thQuantity = document.createElement('th');
       trItem.appendChild(thQuantity);
       thQuantity.textContent = 0;
       for (let j = 0; j < cartItem.length; j++) {
