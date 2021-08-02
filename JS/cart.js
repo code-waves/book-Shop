@@ -14,6 +14,10 @@ let form = document.getElementById('info-form');
 
 form.addEventListener('submit', userReview);
 
+let feedbackarr = [];
+
+
+
 
 
 // add eventlistener to form
@@ -24,6 +28,8 @@ function userReview(event) {
   let age = parseInt(event.target.age.value);
   let feedback = event.target.feedback.value;
   let addFeedback = new updateReview(firstName, lastName, age, feedback);
+  console.log(addFeedback);
+  feedbackarr.push(addFeedback)
   localStorage.removeItem('selected books');
   table.textContent = '';
   Swal.fire({
@@ -33,24 +39,25 @@ function userReview(event) {
     showConfirmButton: false,
     timer: 2000
   })
-  
-  console.log(addFeedback);
+  console.log(feedbackarr);
   updateStorge();
 }
-
 console.log(updateReview.all);
-
-
 //Saving from updateReview function
 function updateStorge() {
-  updateReview.all = JSON.stringify(updateReview.all);
-  localStorage.setItem('userfeedback', updateReview.all);
-  updateReview.all = JSON.parse(updateReview.all);
-
+  let storagearr = JSON.stringify(feedbackarr);
+  localStorage.setItem('userfeedback', storagearr);
+  // updateReview.all = JSON.parse(updateReview.all);
+}
+function getData() {
+  let data = localStorage.getItem('userfeedback');
+  let parseArr = JSON.parse(data);
+  if (parseArr !== null) {
+    feedbackarr = parseArr;
+  }
 }
 
-
-
+getData();
 
 
 
