@@ -25,7 +25,7 @@ border: 3px solid #53B8BB; }*/
 
 
 
-h1 {
+/* h1 {
   text-align: center;
   border: 3px solid #3C8DAD;
   padding: 10px;
@@ -35,6 +35,19 @@ h1 {
 /* #hide-option {
   display:none;
 } */
+.hide {
+  display:none;
+}
+
+#hide-first {
+  display:none;
+}
+
+#hide-price {
+  display:none;
+}
+
+
 
 main{
   text-align: center;
@@ -131,4 +144,4 @@ section{
   width: 180px;
   border:solid #f68c1e 1px;
   background-color: palegoldenrod;
-}
+} 
