@@ -27,18 +27,20 @@ function userReview(event) {
   let lastName = event.target.lastName.value;
   let age = parseInt(event.target.age.value);
   let feedback = event.target.feedback.value;
+  // eslint-disable-next-line new-cap
   let addFeedback = new updateReview(firstName, lastName, age, feedback);
   console.log(addFeedback);
-  feedbackarr.push(addFeedback)
+  feedbackarr.push(addFeedback);
   localStorage.removeItem('selected books');
   table.textContent = '';
+  // eslint-disable-next-line no-undef
   Swal.fire({
     position: 'top-end',
     icon: 'success',
     title: `Thank you ${firstName + ' ' + lastName} for purchase, The delivery department will contact you `,
     showConfirmButton: false,
     timer: 2000
-  })
+  });
   console.log(feedbackarr);
   updateStorge();
 }
@@ -69,23 +71,23 @@ function getStorageData() {
   let cartItem = JSON.parse(localStorage.getItem('selected books'));
   console.log(cartItem);
   if (cartItem !== null) {
-    let trhead = document.createElement('tr')
-    table.appendChild(trhead)
-    let imgHead = document.createElement('th')
-    let nameHead = document.createElement('th')
-    let priceHead = document.createElement('th')
-    let quantityHead = document.createElement('th')
-    let actionHead = document.createElement('th')
-    trhead.appendChild(imgHead)
-    trhead.appendChild(nameHead)
-    trhead.appendChild(priceHead)
-    trhead.appendChild(quantityHead)
-    trhead.appendChild(actionHead)
-    imgHead.textContent = 'Image of the book'
-    nameHead.textContent = 'Nook name'
-    priceHead.textContent = 'Price in JD'
-    quantityHead.textContent = 'Quantity'
-    actionHead.textContent = 'Remove'
+    let trhead = document.createElement('tr');
+    table.appendChild(trhead);
+    let imgHead = document.createElement('th');
+    let nameHead = document.createElement('th');
+    let priceHead = document.createElement('th');
+    let quantityHead = document.createElement('th');
+    let actionHead = document.createElement('th');
+    trhead.appendChild(imgHead);
+    trhead.appendChild(nameHead);
+    trhead.appendChild(priceHead);
+    trhead.appendChild(quantityHead);
+    trhead.appendChild(actionHead);
+    imgHead.textContent = 'Image of the book';
+    nameHead.textContent = 'Nook name';
+    priceHead.textContent = 'Price in JD';
+    quantityHead.textContent = 'Quantity';
+    actionHead.textContent = 'Remove';
     for (let i = 0; i < cartItem.length; i++) {
       // console.log(cartItem[i]);
       //   cartItem[i].name;
@@ -110,18 +112,19 @@ function getStorageData() {
       trItem.appendChild(thButton);
       let input = document.createElement('button');
       thButton.appendChild(input);
-      input.textContent = "Clear";
+      input.textContent = 'Clear';
 
       input.addEventListener('click', clear);
+      // eslint-disable-next-line no-inner-declarations
       function clear(event) {
 
         event.preventDefault();
 
         table.deleteRow(cartItem[i]);
 
-        localStorage.removeItem("selected books");
+        localStorage.removeItem('selected books');
         cartItem.splice(cartItem, 1);
-        localStorage.setItem("selected books", JSON.stringify(cartItem));
+        localStorage.setItem('selected books', JSON.stringify(cartItem));
 
       }
 
@@ -129,7 +132,7 @@ function getStorageData() {
       trItem.appendChild(thQuantity);
       thQuantity.textContent = 0;
       for (let j = 0; j < cartItem.length; j++) {
-        if (cartItem[i].name == cartItem[j].name) {
+        if (cartItem[i].name === cartItem[j].name) {
           thQuantity.textContent++;
         }
       }
