@@ -49,7 +49,7 @@ border: 3px solid #53B8BB; }*/
 
 .navMenu :nth-child(4){
     position: absolute;
-  left: 110%;
+  left: 90%;
 }
 .navMenu a {
   color: blue;
@@ -65,6 +65,9 @@ border: 3px solid #53B8BB; }*/
   color: #FFA900;
 }
 .hide {
+  display:none;
+}
+#hide-price {
   display:none;
 }
 
@@ -134,6 +137,19 @@ button:hover {
   font-size: 20px;
 }  
 
+.html-page-header {
+  background-color: #F68C1E;
+  width: 100%;
+  height:190px;
+  padding: 0px;
+  margin: 0px;
+}
+
+.blueLogo{
+  margin-left: 20px;
+  margin-top: 20px;
+  border: none;
+}
 
 
 section{
@@ -190,11 +206,8 @@ form{
 display: inline-block;} */
 
 footer {
-
-  /* left: 0;
-  bottom: 0; */
   width: 100%;
-  height:100%;
+  height:190px;
   background-color: #57837B;
   color: white;
   text-align: center;
@@ -210,29 +223,23 @@ margin-top: 200px;
           background: none !important;
           height: 300px;
           width: 250px;
-   position: absolute;
-   /* right: 20px;
-   bottom: -2400px; */
+   
+ 
    padding-top:33px ;
-   /* bottom: 50px; */
+  
       }
       .mapouter {
       
-          text-align: right;
+         float: right;
           height: 300px;
           width: 300px;
-          position: absolute;
-   right: 20px;
-   bottom: 400px;
-   border: none;
-   box-shadow: none;
 
       }
 
 
 .cur {
   cursor: pointer;
-  /* display: inline-block; */
+ 
 }
 
 .contactUs{
@@ -240,18 +247,19 @@ margin-top: 200px;
 }
 
 .picDiv{
-  display:flex;
-  /* position: relative; */
+ float: left;
   border: none;
-  /* border-color:none ; */
   box-shadow: none;
+
 }
 
  .editPic {
   width: 50px;
   height: 50px;
-  /* border:non; */
+
 }
+
+
 
 
 
