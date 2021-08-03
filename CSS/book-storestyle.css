@@ -1,40 +1,6 @@
 * {
   box-sizing: border-box;
 }
- /* div for the select */
-
-/* select tag */
-/* select {
-background-color: #53B8BB;
-width: 100%;
-
-border: 3px solid #53B8BB; }*/
-
-
-/* categories style */
-/* optgroup {
-  background-color: #53B8BB;
-  width: 100%;
-  padding: 5%;
-  border: 3px solid #53B8BB; 
-  
-
-} */
-
-/* option styles after the render in js */
-
-
-
-/* h1 {
-  text-align: center;
-  border: 3px solid #3C8DAD;
-  padding: 10px;
-  border-radius: 25px;
-}
-/* for select */
-/* #hide-option {
-  display:none;
-} */
 .navMenu {
   position: absolute;
   top: 10%;
@@ -42,17 +8,13 @@ border: 3px solid #53B8BB; }*/
   /* position: relative; */
   width: 50%;
   /* background-color: red; */
-
-  
 }
-
-
 .navMenu :nth-child(4){
     position: absolute;
   left: 90%;
 }
 .navMenu a {
-  color: blue;
+  color: #F1ECC3;
   font-family: cursive;
   text-decoration: none;
   font-size: 1 em;
@@ -70,17 +32,12 @@ border: 3px solid #53B8BB; }*/
 #hide-price {
   display:none;
 }
-
 #hide-first {
   display:none;
 }
-
 /* #hide-price {
   display:none;
 } */
-
-
-
 main{
   text-align: center;
   /* width: 225%; */
@@ -99,7 +56,8 @@ h4{
   color: #F68C1E;
 }
 p{
-  color: black;
+  color: rgb(233, 231, 231);
+  font-size: 20px;
 }
 img{
   width: 170px;
@@ -107,20 +65,12 @@ img{
   border: solid black 1px;
 }
 div {
-  /* display: inline-block; */
-/* margin-top: 100px; */
-  /* float: left; */
   float: left;
   border: solid #F68C1E 0.2px;
-  /* float: left; */
-  /* width: 25%; */
-  /* padding:30px; */
-  /* margin: 20px; */
   padding: 30px;
   width: 30%;
   height: 500px;
   box-shadow: 0 4px 8px 0 #012F6B;
-  /* margin-left: 3%; */
 }
 button{
   width: 200px;
@@ -136,26 +86,20 @@ button:hover {
   box-shadow: 0 12px 16px 0 red;
   font-size: 20px;
 }  
-
 .html-page-header {
-  background-color: #F68C1E;
+  background-color: #57837B;
   width: 100%;
   height:190px;
   padding: 0px;
   margin: 0px;
 }
-
 .blueLogo{
   margin-left: 20px;
   margin-top: 20px;
   border: none;
 }
-
-
 section{
   float: left;
-  /* width: 20%; */
-  /* padding:20px; */
   text-align: center;
   margin-left: 60px;
 }
@@ -167,7 +111,7 @@ section{
 #in1{
   width: 100px;
   height: 30px; 
-  background-color: #f68c1e;
+  background-color: #F68C1E;
   color: white;
   font-weight: bold;
   font-size: 15px;
@@ -177,7 +121,7 @@ section{
 #in3{
   height: 28px; 
   width: 180px;
-  border:solid #f68c1e 1px;
+  border:solid #F68C1E 1px;
   background-color: palegoldenrod;
 }
 #imgsearch{
@@ -189,79 +133,83 @@ section{
 #Price{
   height: 28px; 
   width: 180px;
-  border:solid #f68c1e 1px;
+  border:solid #F68C1E 1px;
+  background-color: palegoldenrod;
+  
+}
+#list{
+  height: 28px; 
+  width: 180px;
+  border:solid #F68C1E 1px;
   background-color: palegoldenrod;
 }
 #Catagory{
   height: 28px; 
   width: 180px;
-  border:solid #f68c1e 1px;
+  border:solid #F68C1E 1px;
   background-color: palegoldenrod;
 } 
 form{
   float: left;
 }
-
 /* #bookbook{
 display: inline-block;} */
 
+
+
 footer {
-  width: 100%;
-  height:190px;
-  background-color: #57837B;
+  width: 105%;
+  height:340px;
   color: white;
   text-align: center;
-  padding-top: 50px;
-display: inline-block;
-position: relative;  
-margin-top: 200px;
- 
-
+margin-left: -70px;
+clear: both;
+    position: relative;
+    margin-top: 200px;
 }
-.gmap_canvas {
+.mapouter {
+  float: right;
+  margin-right:5%;
+  margin-top: 20px;
+   /* height: 300px;
+   width: 500px;  */
+}
+/* .gmap_canvas {
           overflow: hidden;
           background: none !important;
           height: 300px;
           width: 250px;
-   
- 
    padding-top:33px ;
-  
-      }
-      .mapouter {
+      } */
       
-         float: right;
-          height: 300px;
-          width: 300px;
-
-      }
-
-
 .cur {
   cursor: pointer;
- 
 }
-
 .contactUs{
   color: red;
 }
-
 .picDiv{
  float: left;
   border: none;
   box-shadow: none;
-
 }
-
  .editPic {
   width: 50px;
   height: 50px;
-
 }
-
-
-
-
-
-
-
+#order{
+float: left;
+margin-left: 50px;
+}
+#orimage{
+  float: left;
+}
+#foot{
+  background-color:#515E63;
+  margin-top: 200px;
+}
+#copy{
+  color: chocolate;
+  font-size: 25px;
+  text-align: center;
+}

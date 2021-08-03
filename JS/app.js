@@ -73,7 +73,9 @@ let Review = document.getElementById('Review');
 let userReview = document.createElement('p');
 Review.appendChild(userReview);
 console.log(Review);
-let storgeReview = JSON.parse(localStorage.getItem('userfeedback'));
+
+storgeReview = JSON.parse(localStorage.getItem('userfeedback'));
+
 console.log(storgeReview);
 
 getStorageData();
