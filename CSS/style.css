@@ -15,9 +15,15 @@ header{
     
 }
 
+
+
+
+
+
 .blueLogo{
     margin-left: 20px;
     margin-top: 20px;
+    border: none;
 }
   .navMenu {
     position: absolute;
@@ -321,7 +327,7 @@ footer {
 .gmap_canvas {
             overflow: hidden;
             background: none !important;
-            height: 300px;
+            height: 250px;
             width: 250px;
      position: absolute;
      /* right: 20px;
@@ -439,7 +445,7 @@ float: left;
         font-size: 30px;
         
 
-      }
+      } 
       /* width */
 #Review::-webkit-scrollbar {
   width: 20px;
