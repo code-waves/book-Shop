@@ -92,29 +92,24 @@ function getStorageData() {
       thName.textContent = cartItem[i].name;
       let thPrice = document.createElement('td');
       trItem.appendChild(thPrice);
-      thPrice.textContent =` ${cartItem[i].price} JD`;
+      thPrice.textContent = ` ${cartItem[i].price} JD`;
       let thButton = document.createElement('td');
       trItem.appendChild(thButton);
       let input = document.createElement('button');
       thButton.appendChild(input);
       input.textContent = 'Clear';
       input.addEventListener('click', clear);
-      // eslint-disable-next-line no-inner-declarations
+      
       function clear(event) {
-        // event.preventDefault();
-console.log(i);
-console.log(document.getElementsByTagName('tr'));
-
-
-        table.deleteRow(i);
-
+        input.onClick=document.location.reload();
+      
         localStorage.removeItem('selected books');
-     console.log( cartItem.indexOf(cartItem[i]));
-    let selectedItem= cartItem.indexOf(cartItem[i])
-
+      
+        let selectedItem = cartItem.indexOf(cartItem[i])
         cartItem.splice(selectedItem, 1);
         localStorage.setItem('selected books', JSON.stringify(cartItem));
       }
+
       let thQuantity = document.createElement('td');
       trItem.appendChild(thQuantity);
       thQuantity.textContent = 0;

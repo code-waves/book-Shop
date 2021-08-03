@@ -73,8 +73,7 @@ Book.prototype.renderBooks = function () {
   input.addEventListener('click', userClick);
   // eslint-disable-next-line no-unused-vars
   function userClick(event) {
-    // console.log(event.target.value);
-    // console.log(object);
+    event.preventDefault();
     cartArray.push(object);
     // console.log('cartArray :',cartArray);
     cartArrayStorge();
