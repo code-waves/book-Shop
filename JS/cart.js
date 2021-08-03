@@ -7,6 +7,7 @@ function updateReview(firstName, lastName, age, feedback) {
   this.age = age;
   this.feedback = feedback;
   updateReview.all.push(this);
+
 }
 
 updateReview.all = [];
@@ -14,7 +15,9 @@ let form = document.getElementById('info-form');
 
 form.addEventListener('submit', userReview);
 
+
 let feedbackarr = [];
+
 
 
 
