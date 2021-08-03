@@ -14,7 +14,7 @@
   left: 90%;
 }
 .navMenu a {
-  color: blue;
+  color: #F1ECC3;
   font-family: cursive;
   text-decoration: none;
   font-size: 1 em;
@@ -87,7 +87,7 @@ button:hover {
   font-size: 20px;
 }  
 .html-page-header {
-  background-color: #F68C1E;
+  background-color: #57837B;
   width: 100%;
   height:190px;
   padding: 0px;
@@ -136,6 +136,12 @@ section{
   border:solid #F68C1E 1px;
   background-color: palegoldenrod;
 }
+#list{
+  height: 28px; 
+  width: 180px;
+  border:solid #F68C1E 1px;
+  background-color: palegoldenrod;
+}
 #Catagory{
   height: 28px; 
   width: 180px;
@@ -151,15 +157,18 @@ display: inline-block;} */
 
 
 footer {
-  width: 145%;
+  width: 105%;
   height:340px;
   color: white;
   text-align: center;
 margin-left: -70px;
+clear: both;
+    position: relative;
+    margin-top: 200px;
 }
 .mapouter {
   float: right;
-  margin-right: 200px;
+  margin-right:5%;
   margin-top: 20px;
    /* height: 300px;
    width: 500px;  */
@@ -196,9 +205,10 @@ margin-left: 50px;
 }
 #foot{
   background-color:#515E63;
+  margin-top: 200px;
 }
 #copy{
   color: chocolate;
   font-size: 25px;
-  margin-left: 30%;
+  text-align: center;
 }

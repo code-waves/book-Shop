@@ -1,4 +1,6 @@
-
+body{
+    background-color: #F1ECC3;
+}
 nav {
     margin: 0px auto;
     width: 1500px;
@@ -6,6 +8,7 @@ nav {
     color: #334257;
     /* background-color: yellow; */
     /* display: inline-block; */
+    /* background-color: #515E63; */
     
     
 }
@@ -31,4 +34,45 @@ a {
     text-decoration: none;
     color:#334257;
     font-size: large;
+}
+
+
+footer {
+
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height:300px;
+    background-color: #57837B;
+    color: white;
+    text-align: center;
+    padding-top: 50px;
+ display: inline-block;
+ position: relative;  
+   
+
+}
+.gmap_canvas {
+            overflow: hidden;
+            background: none !important;
+            height: 300px;
+            width: 250px;
+     position: absolute;
+     /* right: 20px;
+     bottom: -2400px; */
+     padding-top:33px ;
+        }
+        .mapouter {
+        
+            text-align: right;
+            height: 300px;
+            width: 300px;
+            position: absolute;
+     right: 20px;
+     bottom: 20px;
+        }
+
+
+.cur {
+    cursor: pointer;
 }
