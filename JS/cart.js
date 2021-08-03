@@ -163,10 +163,3 @@ getStorageData();
 // thPrice.textContent = Book.allbooks[i].price;
 
 // }
-
-
-
-
-
-
-
