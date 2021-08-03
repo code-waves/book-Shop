@@ -1,11 +1,12 @@
 *{
     box-sizing: border-box;
+    font-family: 'Asul', sans-serif;
 }
 
 header{
     /* position: relative; */
     /* background-color: rgb(255,245,217); */
-    font-family: 'Asul', sans-serif;
+   
     height: 100vh;
     background: linear-gradient(rgba(0, 0, 0, 0.4),rgba(47, 0, 255, 0.5)),url(../pic/Library2.png);
     background-position: center;
@@ -13,6 +14,42 @@ header{
     /* background-color:rgb(255,245,217) ; */
     
 }
+
+
+
+
+
+
+.blueLogo{
+    margin-left: 20px;
+    margin-top: 20px;
+    border: none;
+}
+  .navMenu {
+    position: absolute;
+    top: 10%;
+    left: 40%;
+    /* position: relative; */
+    width: 50%;
+    
+  }
+  .navMenu :nth-child(4){
+      position: absolute;
+    left: 110%;
+  }
+  .navMenu a {
+    color: whitesmoke;
+    font-family: cursive;
+    text-decoration: none;
+    font-size: 1 em;
+    text-transform: uppercase;
+    font-weight: 500;
+    display: inline-block;
+    width: 120px;
+  }
+  .navMenu a:hover {
+    color: #FFA900;
+  }
 
 p {
 font-size: 30px;
@@ -149,6 +186,7 @@ margin-bottom: -1%;
 width: 100%;
 text-align: center;
 margin-right: 10px;
+/* font-size:10px; */
 
 
 }
@@ -169,6 +207,7 @@ margin-right: 10px;
 .paragrahBox p{
 line-height: 30px;
 text-align: justify;
+font-size: 20px;
 }
 
 #Categories{
@@ -243,6 +282,7 @@ height: 100%;
     background: linear-gradient(rgba(255, 196, 0, 0.8),rgba(47, 0, 255, 0.3));
     transform: scaleY(0);
     transition: 1s;
+    /* margin-bottom: 20%; */
 }
 #container .box:hover .deatiles{
     transform: scaleY(1);
@@ -254,6 +294,9 @@ height: 100%;
     text-align: center;
     padding: 15px;
     color: #fff;
+    font-size: larger;
+    /* margin-bottom: 20%; */
+    top: 30px;
 }
 .buttonHover{
     width: 150px;
@@ -266,28 +309,30 @@ height: 100%;
 
 
 
-.footer {
+footer {
 
     left: 0;
     bottom: 0;
     width: 100%;
     height:300px;
-    background-color: black;
+    background-color: #262A53;
     color: white;
     text-align: center;
     padding-top: 50px;
  display: inline-block;
+ position: relative;  
    
 
 }
 .gmap_canvas {
             overflow: hidden;
             background: none !important;
-            height: 300px;
-            width: 300px;
+            height: 250px;
+            width: 250px;
      position: absolute;
-     right: 20px;
-     bottom: -1366px;
+     /* right: 20px;
+     bottom: -2400px; */
+     padding-top:33px ;
         }
         .mapouter {
         
@@ -393,8 +438,50 @@ float: left;
         width: 40%;
         margin-left: 33%;
         padding-left: 0px;
-        overflow: scroll;
-        height: 350px;
+        overflow: auto;
+        height: 250px;
         margin-right: 282px;
+        background-color: #bbb;
+        font-size: 30px;
+        
+
+      } 
+      /* width */
+#Review::-webkit-scrollbar {
+  width: 20px;
+}
+
+/* Track */
+#Review::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 10px;
+}
+ 
+/* Handle */
+#Review::-webkit-scrollbar-thumb {
+  background: red; 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+#Review::-webkit-scrollbar-thumb:hover {
+  background: #b30000; 
+}
+      .contactUs{
+        font-size: 30px;
       }
-      
+
+      .boxDetails{
+        font-size: 30px;
+        text-align: center;
+        color: #fff;
+        font-weight: bold;
+        margin-top: 20%;
+      }
+      /* #firstName{
+        color: #fff;
+        background-color: red;
+      } */
+       p{
+        color: #fff;
+      }

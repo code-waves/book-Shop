@@ -1,0 +1,151 @@
+
+*{
+    box-sizing: border-box;
+    font-family: 'Asul', sans-serif;
+  }
+  
+  body{
+      color: #515E63;
+      background-color: #F1ECC3;
+      font-family: 'Asul', sans-serif;
+      margin: 0;
+  }
+  
+  
+  h1 , h2{
+      text-align: center;
+      color: #515E63;
+  }
+  
+  
+  p{
+    
+    text-align: center;
+    color: #515E63;
+  }
+  
+  
+  
+  /* Header ------------------------------------------------------*/
+  header{ 
+    height: 170px;
+    background-color: #57837B;
+    background-position: center;
+    background-size: cover; 
+  }
+  
+  .navMenu a {
+    color: #F1ECC3;
+    font-family: cursive;
+    text-decoration: none;
+    font-size: 1 em;
+    text-transform: uppercase;
+    font-weight: 500;
+    display: inline-block;
+    width: 120px;
+  }
+  
+  .navMenu a:hover {
+    color: #FFA900;
+  }
+  
+  
+  
+  .blueLogo{
+    margin-left: 20px;
+    margin-top: 20px;
+  }
+  
+  
+  
+  .navMenu {
+    position: absolute;
+    top: 10%;
+    left: 40%;
+    width: 50%; 
+  }
+  
+  
+  .navMenu :nth-child(4){
+      position: absolute;
+    left: 110%;
+  }
+  
+  
+  /* Div for Our team ----------------------------------------------- */
+  
+    .div1 {
+      float: left;
+      width: 30%;
+      padding:20px;
+      margin-left: 35px;
+    }
+  
+  
+    .div2 {
+      box-shadow: 0 4px 8px 0 #012f6b;
+    }
+  
+    
+    #title {
+      color: rgb(121, 121, 139);
+      text-align: center;
+    }
+  
+  
+    .img1{
+      text-align: center;
+    }
+  
+  
+    .img2{
+      border-radius: 50%;
+      border: solid;
+      margin-top: 20px;
+  }
+  
+  
+  /* Footer --------------------------------------------------------------------- */
+  
+  footer {
+  
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height:300px;
+    background-color: #515E63;
+    color: white;
+    text-align: center;
+    padding-top: 50px;
+    display: inline-block;
+    position: relative;  
+  }
+  
+  .gmap_canvas {
+            overflow: hidden;
+            background: none !important;
+            height: 300px;
+            width: 250px;
+     position: absolute;
+     padding-top:33px ;
+        }
+  
+        .mapouter {
+        
+            text-align: right;
+            height: 300px;
+            width: 300px;
+            position: absolute;
+     right: 20px;
+     bottom: 20px;
+        }
+  
+  
+  .cur {
+    cursor: pointer;
+  }
+  
+  #div1>a {
+    text-decoration: underline #548CA8;
+    color: #548CA8;
+  }
