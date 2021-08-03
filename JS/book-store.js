@@ -21,48 +21,27 @@ function Book (src,category,name,price){
   Book.allbooks.push(this);
 }
 console.log(Book.allbooks);
-// computer science - Price : 12-17JD
-new Book('imges/logic programin.jpg','computer science',' logic programin',20);
-new Book('imges/logic cs.jpg','computer science','computer science ','');
+
+new Book('imges/logic programin.jpg','computer science',' logic programin',19);
+new Book('imges/logic cs.jpg','computer science','computer science ',35);
 new Book('imges/How to make an Operating System.jpg','computer science','How to make an Operating System ',80);
 new Book('imges/Operating Systems.jpeg','computer science','Operating Systems: Three Easy Pieces ',12);
 new Book('imges/An Introduction to Statistical Learning with Applications in R.jpg','computer science','An Introduction to Statistical Learning with Applications in R',16);
 new Book('imges/A Whirlwind Tour of Python.jpg','computer science',' Whirlwind Tour of Python ',23);
-
-// Web Design and Development Price : 20-25JD
-new Book('imges/AngularJS Essentials.jpg','Web Design and Development','AngularJS Essentials',20);
-new Book('imges/Building Front-End Web Apps with Plain JavaScript.png','Web Design and Development','Building Front-End Web Apps with Plain JavaScript',22);
-new Book('imges/Mobile Developer\'s Guide to The Galaxy.jpg','Web Design and Development','Mobile Developer\'s Guide to The Galaxy',23);
-new Book('imges/Learning JavaScript Design Patterns.jpg','Web Design and Development','Learning JavaScript Design Patterns',24);
-new Book('imges/Just Ask- Integrating Accessibility Throughout Design.jpg','Web Design and Development','Just Ask Integrating Accessibility Throughout Design',25);
+new Book('imges/AngularJS Essentials.jpg','Web Design and Development','AngularJS Essentials',77);
+new Book('imges/Building Front-End Web Apps with Plain JavaScript.png','Web Design and Development','Building Front-End Web Apps with Plain JavaScript',12);
+new Book('imges/Mobile Developer\'s Guide to The Galaxy.jpg','Web Design and Development','Mobile Developer\'s Guide to The Galaxy',33);
+new Book('imges/Learning JavaScript Design Patterns.jpg','Web Design and Development','Learning JavaScript Design Patterns',38);
+new Book('imges/Just Ask- Integrating Accessibility Throughout Design.jpg','Web Design and Development','Just Ask Integrating Accessibility Throughout Design',95);
 new Book('imges/Adaptive Web Design.jpg','Web Design and Development','Adaptive Web Design',22);
-// Computer Coding for Kids Price : 10-15JD
-new Book('imges/Coding for Kids.jpg','Computer Coding for Kids','Coding for Kids',10);
+new Book('imges/Coding for Kids.jpg','Computer Coding for Kids','Coding for Kids',11);
 new Book('imges/How To Be a Coder.jpg','Computer Coding for Kids','How To Be a Coder',12);
-new Book('imges/First Coding Book for Kids.jpg','Computer Coding for Kids','First Coding Book for Kids',10);
+new Book('imges/First Coding Book for Kids.jpg','Computer Coding for Kids','First Coding Book for Kids',26);
 new Book('imges/Computer Coding for Kids.jpg','Computer Coding for Kids','Computer Coding for Kids',10);
-new Book('imges/Baby Loves Coding.jpg','Computer Coding for Kids','Baby Loves Coding',15);
-new Book('imges/Can You Crack the Code.jpg','Computer Coding for Kids','Can You Crack the Code',13);
+new Book('imges/Baby Loves Coding.jpg','Computer Coding for Kids','Baby Loves Coding',65);
+new Book('imges/Can You Crack the Code.jpg','Computer Coding for Kids','Can You Crack the Code',23);
 
 
-
-// create optins
-// for (let i = 0; i < Book.allbooks.length; i++) {
-//     let optioncatagory = document.createElement('option');
-//     select1.appendChild(optioncatagory);
-//     // optioncatagory.textContent = Book.allbooks[i].category;
-// }
-
-
-
-
-// for (let i = 0; i < Book.allbooks.length; i++) {
-//     let optionprice = document.createElement('option');
-//     select2.appendChild(optionprice);
-//     optionprice.textContent = Book.allbooks[i].price;
-// }
-// create and show books in the store page
-// create and show books in the store page
 let input;
 let cartArray=[];
 Book.prototype.renderBooks = function () {
@@ -97,7 +76,7 @@ Book.prototype.renderBooks = function () {
     // console.log(event.target.value);
     // console.log(object);
     cartArray.push(object);
-    console.log(cartArray);
+    // console.log('cartArray :',cartArray);
     cartArrayStorge();
   }
   // }
@@ -116,7 +95,7 @@ function filterSelection(event) {
 
 
 
-  let selectedValue=select.value;
+  let selectedValue = select.value;
   //  console.log('option',select.value);
   let x = document.getElementsByTagName('span');
   for (let i = 0; i < x.length; i++) {
@@ -130,57 +109,75 @@ function filterSelection(event) {
       // eslint-disable-next-line no-unused-vars
       let spanClass=x[i].classList.add('hide');
 
-
-
-
     }
-
-
-
   }
 
-
-
-
-
-
-
 }
-
-
 
 // add event listener for the price selection
 
 
-// let selectprice=document.getElementById("Price");
+let selectprice=document.getElementById("Price");
 // console.log(select)
 
-// select.addEventListener('change',filterSelectionPrice);
-// function filterSelectionPrice(event) {
+selectprice.addEventListener('change',filterSelectionPrice);
+function filterSelectionPrice(event) {
 
-//     console.log(event);
+    console.log('Event : ',event);
 
-//     let selectedValuePrice=selectprice.value;
-//      console.log('option',selectedValuePrice);
-// let  x2= document.getElementsByTagName("span");
-// for (let i = 0; i < x2.length; i++) {
-//     // x2[i].classList.remove('hide2');
-//     let bookprice=x2[i].childNodes[4].innerHTML;
-//     if (parse(bookprice) {
-//     // let spanClass=x[i].classList.add('hide2')
+    let selectedValuePrice=selectprice.value;
+    //  console.log('option',selectedValuePrice);
+let  x= document.getElementsByTagName("span");
+for (let i = 0; i < x.length; i++) {
+    x[i].classList.remove('hide');
+    let bookprice=x[i].childNodes[3].innerHTML;
 
-//     }
+    //      1 : 
+            if (selectedValuePrice === 'Less Than 20 JD' ) { 
+            if(bookprice < 20){
+            let spanClass1=x[i].classList.remove('hide')
+            }
+            if(bookprice >= 20 && bookprice<=40){
+              let spanClass2=x[i].classList.add('hide')
+              }
+              if(bookprice > 40){
+                let spanClass3=x[i].classList.add('hide')
+                }
+          }
 
+    //      2 :       
+            else if (selectedValuePrice === '21 - 40 JD') {
+              if(bookprice < 20 ){
+                let spanClass2=x[i].classList.add('hide')
+                   console.log('spanClass2' , spanClass2)
+                }
+             if(bookprice >= 20 && bookprice<=40){
+              let spanClass2=x[i].classList.remove('hide')
+                 console.log('spanClass2' , spanClass2)
+              }
+                if(bookprice > 40){
+                  let spanClass2=x[i].classList.add('hide')
+                     console.log('spanClass2' , spanClass2)
+                  }
+            }
 
-
-// }
-
-
-
-
-
-
-
+    //      3 : 
+            else {
+              if(bookprice < 20 ){
+                let spanClass2=x[i].classList.add('hide')
+                   console.log('spanClass2' , spanClass2)
+                }
+             if(bookprice >= 20 && bookprice<=40){
+              let spanClass2=x[i].classList.add('hide')
+                 console.log('spanClass2' , spanClass2)
+              }
+                if(bookprice > 40){
+                  let spanClass2=x[i].classList.remove('hide')
+                     console.log('spanClass2' , spanClass2)
+                  }
+              }
+}
+}
 
 //event listener for each button
 function cartArrayStorge() {
@@ -190,9 +187,9 @@ function cartArrayStorge() {
 // get arry from local storage books arry
 function getStorageData(){
   let data=localStorage.getItem('selected books');
-  console.log(data);
+//   console.log(data);
   let parseArr=JSON.parse(data);
-  console.log(parseArr);
+//   console.log(parseArr);
   if (parseArr!==null) {
     cartArray=parseArr;
   }
