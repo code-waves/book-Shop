@@ -86,3 +86,49 @@ button:hover {
 
 
 
+section{
+  float: left;
+  width: 20%;
+  /* padding:20px; */
+  text-align: center;
+  margin-left: 60px;
+}
+#label{
+  color: darkblue;
+  font-size: 22px;
+  font-weight: bold;
+}
+#in1{
+  width: 100px;
+  height: 30px; 
+  background-color: #f68c1e;
+  color: white;
+  font-weight: bold;
+  font-size: 15px;
+  border: none;
+  border-radius: 10px;
+}
+#in3{
+  height: 28px; 
+  width: 180px;
+  border:solid #f68c1e 1px;
+  background-color: palegoldenrod;
+}
+#imgsearch{
+  width: 15px;
+   height: 15px;
+   border: solid black 1px;
+   border-radius: 30px;
+}
+#Price{
+  height: 28px; 
+  width: 180px;
+  border:solid #f68c1e 1px;
+  background-color: palegoldenrod;
+}
+#Catagory{
+  height: 28px; 
+  width: 180px;
+  border:solid #f68c1e 1px;
+  background-color: palegoldenrod;
+}
