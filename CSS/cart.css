@@ -84,6 +84,11 @@ button:hover {
      max-width:500px;
      margin:auto
  }
+ form:hover{
+  transform: scale(1.1);
+  transition-duration: 1s;
+ 
+}
  fieldset{
     background-color: #334257;
     border: solid black 1px;
@@ -97,13 +102,19 @@ button:hover {
      font-weight: bold;
  }
  input{
-    width: 95%;
+    width:80%;
   padding: 10px;
   outline: none;
   background-color: #C9D8B6;
   color: 515E63;
   font-weight: bold;
   text-align: center;
+  border:1px solid black;
+ }
+ input:hover{
+transform:scale(1.1) ;
+  
+   transition-duration: 1s;
  }
  input:focus {
     border: 2px solid rgb(65, 9, 196);
