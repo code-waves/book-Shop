@@ -62,4 +62,18 @@ function getStorageData() {
   }
 
 }
+
+
+
+
+
+
+// review
+let Review = document.getElementById('Review');
+let userReview = document.createElement('p');
+Review.appendChild(userReview);
+console.log(Review);
+storgeReview = JSON.parse(localStorage.getItem('userfeedback'));
+console.log(storgeReview);
+
 getStorageData();

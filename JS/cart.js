@@ -6,6 +6,7 @@ function updateReview(firstName, lastName, age, feedback) {
   this.age = age;
   this.feedback = feedback;
   updateReview.all.push(this);
+
 }
 updateReview.all = [];
 let form = document.getElementById('info-form');
@@ -123,28 +124,3 @@ console.log(document.getElementsByTagName('tr'));
   }
 }
 getStorageData();
-// for (let i = 0; i < Book.allbooks.length; i++) {
-// let trItem = document.createElement('tr');
-// table.appendChild(trItem);
-// let thImage1 = document.createElement('th');
-// trItem.appendChild(thImage1);
-// let thImage = document.createElement('img');
-// thImage1.appendChild(thImage);
-// thImage.setAttribute('src', Book.allbooks[i].src);
-// let thName = document.createElement('th');
-// trItem.appendChild(thName);
-// thName.textContent = Book.allbooks[i].name;
-// let thPrice = document.createElement('th');
-// trItem.appendChild(thPrice);
-// thPrice.textContent = Book.allbooks[i].price;
-// }
-
-
-
-
-
-
-
-
-
-
