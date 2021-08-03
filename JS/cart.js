@@ -1,5 +1,4 @@
 'use strict';
-
 // constructor updateReview function
 function updateReview(firstName, lastName, age, feedback) {
   this.firstName = firstName;
@@ -8,18 +7,10 @@ function updateReview(firstName, lastName, age, feedback) {
   this.feedback = feedback;
   updateReview.all.push(this);
 }
-
 updateReview.all = [];
 let form = document.getElementById('info-form');
-
 form.addEventListener('submit', userReview);
-
 let feedbackarr = [];
-
-
-
-
-
 // add eventlistener to form
 function userReview(event) {
   event.preventDefault();
@@ -58,16 +49,9 @@ function getData() {
     feedbackarr = parseArr;
   }
 }
-
 getData();
-
-
-
-
 let table = document.getElementById('table');
-
 function getStorageData() {
-
   let cartItem = JSON.parse(localStorage.getItem('selected books'));
   console.log(cartItem);
   if (cartItem !== null) {
@@ -84,51 +68,50 @@ function getStorageData() {
     trhead.appendChild(quantityHead);
     trhead.appendChild(actionHead);
     imgHead.textContent = 'Image of the book';
-    nameHead.textContent = 'Nook name';
-    priceHead.textContent = 'Price in JD';
-    quantityHead.textContent = 'Quantity';
-    actionHead.textContent = 'Remove';
+    nameHead.textContent = 'Book name';
+    priceHead.textContent = 'Price';
+    quantityHead.textContent = 'Remove';
+    actionHead.textContent = 'Quantity';
     for (let i = 0; i < cartItem.length; i++) {
       // console.log(cartItem[i]);
       //   cartItem[i].name;
       //   console.log('name:',cartItem[i].name);
       let trItem = document.createElement('tr');
       table.appendChild(trItem);
-      let thImage1 = document.createElement('th');
+      let thImage1 = document.createElement('td');
       trItem.appendChild(thImage1);
       let thImage = document.createElement('img');
       thImage1.appendChild(thImage);
       thImage.setAttribute('src', cartItem[i].src);
-
-      let thName = document.createElement('th');
+      let thName = document.createElement('td');
       trItem.appendChild(thName);
       thName.textContent = cartItem[i].name;
-
-      let thPrice = document.createElement('th');
+      let thPrice = document.createElement('td');
       trItem.appendChild(thPrice);
-      thPrice.textContent = cartItem[i].price;
-
-      let thButton = document.createElement('th');
+      thPrice.textContent =` ${cartItem[i].price} JD`;
+      let thButton = document.createElement('td');
       trItem.appendChild(thButton);
       let input = document.createElement('button');
       thButton.appendChild(input);
       input.textContent = 'Clear';
-
       input.addEventListener('click', clear);
       // eslint-disable-next-line no-inner-declarations
       function clear(event) {
+        // event.preventDefault();
+console.log(i);
+console.log(document.getElementsByTagName('tr'));
 
-        event.preventDefault();
 
-        table.deleteRow(cartItem[i]);
+        table.deleteRow(i);
 
         localStorage.removeItem('selected books');
-        cartItem.splice(cartItem, 1);
+     console.log( cartItem.indexOf(cartItem[i]));
+    let selectedItem= cartItem.indexOf(cartItem[i])
+
+        cartItem.splice(selectedItem, 1);
         localStorage.setItem('selected books', JSON.stringify(cartItem));
-
       }
-
-      let thQuantity = document.createElement('th');
+      let thQuantity = document.createElement('td');
       trItem.appendChild(thQuantity);
       thQuantity.textContent = 0;
       for (let j = 0; j < cartItem.length; j++) {
@@ -136,15 +119,10 @@ function getStorageData() {
           thQuantity.textContent++;
         }
       }
-
-
     }
-
   }
-
 }
 getStorageData();
-
 // for (let i = 0; i < Book.allbooks.length; i++) {
 // let trItem = document.createElement('tr');
 // table.appendChild(trItem);
@@ -153,13 +131,20 @@ getStorageData();
 // let thImage = document.createElement('img');
 // thImage1.appendChild(thImage);
 // thImage.setAttribute('src', Book.allbooks[i].src);
-
 // let thName = document.createElement('th');
 // trItem.appendChild(thName);
 // thName.textContent = Book.allbooks[i].name;
-
 // let thPrice = document.createElement('th');
 // trItem.appendChild(thPrice);
 // thPrice.textContent = Book.allbooks[i].price;
-
 // }
+
+
+
+
+
+
+
+
+
+
