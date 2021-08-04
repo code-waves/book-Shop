@@ -24,6 +24,8 @@ header{
   .blueLogo{
     margin-left: 20px;
     margin-top: 20px;
+    height: 140px;
+    width: 150px;
   }
   .navMenu {
     position: absolute;
@@ -100,6 +102,7 @@ button:hover {
     padding: 10px;
     
  }
+
  label{
      color: whitesmoke;
      font-size: 15px;
@@ -157,18 +160,22 @@ td{
     font-size: 25px;
     vertical-align: middle;
 }
+img{
+  height: 300px;
+  width:200px ;
+}
 
-
- img{
-     width: 150px;
-     height: 150px;
+ .cur > img{
+     width: 40px;
+     height: 40px;
+     border-radius: 50%;
  }
 
  footer {
     left: 0;
     bottom: 0;
     width: 100%;
-    height:300px;
+    height:250px;
     background-color:#515E63;
     color: white;
     text-align: center;
@@ -179,7 +186,7 @@ td{
   .gmap_canvas {
             overflow: hidden;
             background: none !important;
-            height: 300px;
+            height: 270px;
             width: 250px;
      position: absolute;
      padding-top:33px ;
@@ -190,7 +197,7 @@ td{
             width: 300px;
             position: absolute;
      right: 20px;
-     bottom: 20px;
+     bottom: -20px;
         }
   .cur {
     cursor: pointer;
