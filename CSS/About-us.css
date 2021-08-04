@@ -11,10 +11,13 @@
       margin: 0;
   }
   
-  
-  h1 , h2{
-      text-align: center;
+  h1 {
+    text-align: center;
       color: #515E63;
+  }
+   h2{
+      text-align: center;
+      color: #ffffff;
   }
   
   
@@ -68,30 +71,32 @@
   }
   
   
-  .navMenu :nth-child(4){
-      position: absolute;
-    left: 100%;
-  }
+
   
   
   /* Div for Our team ----------------------------------------------- */
-  
+ 
     .div1 {
       float: left;
       width: 30%;
       padding:20px;
       margin-left: 35px;
+      
     }
   
   
     .div2 {
       box-shadow: 0 4px 8px 0 #012f6b;
+      background-color:  #334257;
     }
-  
+  .div2 p{
+  color:  #ffffff;
+  }
     
     #title {
-      color: rgb(121, 121, 139);
+      color: rgb(255, 255, 255);
       text-align: center;
+      
     }
   
   

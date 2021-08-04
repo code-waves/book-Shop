@@ -76,9 +76,11 @@ update on cart.js:
 Edit_CSS:  
 **[v.1.2.0] 4/8/2021**
 
-final edits:  
+css edits:  
 **[v.1.2.1] 4/8/2021**
 
-extra edit:  
+submiting edits:  
 **[v.1.2.2] 4/8/2021**
 
+final edit:  
+**[v.1.2.3] 4/8/2021**

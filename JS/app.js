@@ -38,7 +38,7 @@ function getStorageData() {
   let cartItem = JSON.parse(localStorage.getItem('userfeedback'));
   if (cartItem !== null) {
     for (let i = 0; i < cartItem.length; i++) {
-      let Review = document.getElementById('Review');
+      Review = document.getElementById('Review');
       let userReview = document.createElement('p');
       Review.appendChild(userReview);
       userReview.textContent = cartItem[i].firstName + '  ' + cartItem[i].lastName;

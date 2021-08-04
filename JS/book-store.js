@@ -22,12 +22,12 @@ function Book(src, category, name, price) {
 }
 
 
-new Book('imges/logic programin.jpg', 'computer science', ' logic programin', 19);
-new Book('imges/logic cs.jpg', 'computer science', 'computer science ', 35);
-new Book('imges/How to make an Operating System.jpg', 'computer science', 'How to make an Operating System ', 80);
-new Book('imges/Operating Systems.jpeg', 'computer science', 'Operating Systems: Three Easy Pieces ', 12);
-new Book('imges/An Introduction to Statistical Learning with Applications in R.jpg', 'computer science', 'An Introduction to Statistical Learning with Applications in R', 16);
-new Book('imges/A Whirlwind Tour of Python.jpg', 'computer science', ' Whirlwind Tour of Python ', 23);
+new Book('imges/logic programin.jpg', 'Computer science', ' logic programing', 19);
+new Book('imges/logic cs.jpg', 'Computer science', 'Computer science ', 35);
+new Book('imges/How to make an Operating System.jpg', 'Computer science', 'How to make an Operating System ', 80);
+new Book('imges/Operating Systems.jpeg', 'Computer science', 'Operating Systems: Three Easy Pieces ', 12);
+new Book('imges/An Introduction to Statistical Learning with Applications in R.jpg', 'Computer science', 'An Introduction to Statistical Learning with Applications in R', 16);
+new Book('imges/A Whirlwind Tour of Python.jpg', 'Computer science', ' Whirlwind Tour of Python ', 23);
 new Book('imges/AngularJS Essentials.jpg', 'Web Design and Development', 'AngularJS Essentials', 77);
 new Book('imges/Building Front-End Web Apps with Plain JavaScript.png', 'Web Design and Development', 'Building Front-End Web Apps with Plain JavaScript', 12);
 new Book('imges/Mobile Developer\'s Guide to The Galaxy.jpg', 'Web Design and Development', 'Mobile Developer\'s Guide to The Galaxy', 33);
@@ -73,8 +73,8 @@ Book.prototype.renderBooks = function () {
   input.addEventListener('click', userClick);
   // eslint-disable-next-line no-unused-vars
   function userClick(event) {
-    event.preventDefault();
-  
+event.preventDefault();
+alert(`${object.name} book added to your cart`)  
     if (!cartArray.includes(object) ) {
       cartArray.push(object);
     }
