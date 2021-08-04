@@ -1,4 +1,4 @@
-'use strict';
+
 // constructor updateReview function
 function updateReview(firstName, lastName, age, feedback) {
   this.firstName = firstName;
@@ -36,6 +36,12 @@ function userReview(event) {
     showConfirmButton: false,
     timer: 2000
   });
+
+  event.target.firstName.value = '';
+  event.target.lastName.value = '';
+  event.target.age.value = '';
+  event.target.feedback.value = '';
+
   updateStorge();
 }
 //Saving from updateReview function

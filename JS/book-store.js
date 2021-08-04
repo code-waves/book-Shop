@@ -74,7 +74,8 @@ Book.prototype.renderBooks = function () {
   // eslint-disable-next-line no-unused-vars
   function userClick(event) {
 event.preventDefault();
-alert(`${object.name} book added to your cart`)  
+alert(`${object.name} book added to your cart`);
+  
     if (!cartArray.includes(object) ) {
       cartArray.push(object);
     }
