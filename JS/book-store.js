@@ -1,26 +1,26 @@
 'use strict';
 // variables
 let main = document.getElementById('bookbook');
-// let select1 = document.getElementById('Catagory');
-// let select2 = document.getElementById('Price');
-// eslint-disable-next-line no-unused-vars
+
 let select1 = document.getElementById('computer science');
-// let input=document.getElementById('input');
+
 // eslint-disable-next-line no-unused-vars
 let optinon1 = ['computer science', 'Web Design and Development', 'Computer Coding for Kids'];// category name
 // eslint-disable-next-line no-unused-vars
 let option2 = [];// price
 // books list
-// the price will be a number  add the button
+
 Book.allbooks = [];
 function Book(src, category, name, price) {
   this.name = name;
   this.src = src;
   this.price = price;
   this.category = category;
+  this.quantity=0;
   Book.allbooks.push(this);
+  
 }
-console.log(Book.allbooks);
+
 
 new Book('imges/logic programin.jpg', 'computer science', ' logic programin', 19);
 new Book('imges/logic cs.jpg', 'computer science', 'computer science ', 35);
@@ -45,13 +45,13 @@ new Book('imges/Can You Crack the Code.jpg', 'Computer Coding for Kids', 'Can Yo
 let input;
 let cartArray = [];
 Book.prototype.renderBooks = function () {
-  // for (let i = 0; i < books.length; i++) {
+  
   let span = document.createElement('div');
   main.appendChild(span);
   let imgelement1 = document.createElement('img');
   imgelement1.setAttribute('src', this.src);
   span.appendChild(imgelement1);
-  // console.log(books[i].src);
+ 
   let h2category = document.createElement('h2');
   span.appendChild(h2category);
   h2category.textContent = this.category;
@@ -68,14 +68,19 @@ Book.prototype.renderBooks = function () {
   input = document.createElement('button');
   span.appendChild(input);
   input.textContent = 'Add To Cart';
-  //    console.log(input);
+ 
   let object = this;
   input.addEventListener('click', userClick);
   // eslint-disable-next-line no-unused-vars
   function userClick(event) {
     event.preventDefault();
-    cartArray.push(object);
-    // console.log('cartArray :',cartArray);
+  
+    if (!cartArray.includes(object) ) {
+      cartArray.push(object);
+    }
+    
+    object.quantity++;
+    
     cartArrayStorge();
   }
   // }
@@ -86,7 +91,7 @@ for (let i = 0; i < Book.allbooks.length; i++) {
 
 
 let select = document.getElementById('list');
-// console.log(select)
+
 
 select.addEventListener('change', filterSelection);
 // eslint-disable-next-line no-unused-vars
@@ -95,17 +100,17 @@ function filterSelection(event) {
 
 
   let selectedValue = select.value;
-  //  console.log('option',select.value);
+
   let x = document.getElementsByTagName('div');
   for (let i = 0; i < x.length; i++) {
     x[i].classList.remove('hide');
     let categoryName = x[i].childNodes[1].innerHTML;
 
-    // console.log(selectedValue,categoryName);
+    
     if (selectedValue !== categoryName) {
 
 
-      // eslint-disable-next-line no-unused-vars
+    
       let spanClass = x[i].classList.add('hide');
 
     }
@@ -117,21 +122,18 @@ function filterSelection(event) {
 
 
 let selectprice = document.getElementById("Price");
-// console.log(select)
+
 
 selectprice.addEventListener('change', filterSelectionPrice);
 function filterSelectionPrice(event) {
 
-  console.log('Event : ', event);
 
   let selectedValuePrice = selectprice.value;
-  //  console.log('option',selectedValuePrice);
   let x = document.getElementsByTagName("div");
   for (let i = 0; i < x.length; i++) {
     x[i].classList.remove('hide');
     let bookprice = x[i].childNodes[3].innerHTML;
 
-    //      1 : 
     if (selectedValuePrice === 'Less Than 20 JD') {
       if (Book.allbooks[i].price < 20) {
         // eslint-disable-next-line no-unused-vars
@@ -146,35 +148,27 @@ function filterSelectionPrice(event) {
       }
     }
 
-    //      2 :       
     else if (selectedValuePrice === '21 - 40 JD') {
       if (Book.allbooks[i].price < 20) {
         let spanClass2 = x[i].classList.add('hide');
-        console.log('spanClass2', spanClass2);
       }
       if (Book.allbooks[i].price >= 20 && Book.allbooks[i].price <= 40) {
         let spanClass2 = x[i].classList.remove('hide');
-        console.log('spanClass2', spanClass2);
       }
       if (Book.allbooks[i].price > 40) {
         let spanClass2 = x[i].classList.add('hide');
-        console.log('spanClass2', spanClass2);
       }
     }
 
-    //      3 : 
     else {
       if (Book.allbooks[i].price < 20) {
         let spanClass2 = x[i].classList.add('hide')
-        console.log('spanClass2', spanClass2)
       }
       if (Book.allbooks[i].price >= 20 && Book.allbooks[i].price <= 40) {
         let spanClass2 = x[i].classList.add('hide')
-        console.log('spanClass2', spanClass2)
       }
       if (Book.allbooks[i].price > 40) {
         let spanClass2 = x[i].classList.remove('hide')
-        console.log('spanClass2', spanClass2)
       }
     }
   }
@@ -182,34 +176,17 @@ function filterSelectionPrice(event) {
 
 //event listener for each button
 function cartArrayStorge() {
+
   let strigcartArr = JSON.stringify(cartArray);
   localStorage.setItem('selected books', strigcartArr);
 }
 // get arry from local storage books arry
 function getStorageData() {
   let data = localStorage.getItem('selected books');
-  //   console.log(data);
   let parseArr = JSON.parse(data);
-  //   console.log(parseArr);
   if (parseArr !== null) {
     cartArray = parseArr;
   }
 
 }
 getStorageData();
-// create opptions on each category ... computer scince,Web Design and Development Price,Computer Coding for Kids Price
-// Book.prototype.rendercategoryOptions = function (){
-//     // computer scince options
-//     if (this.category==='computer scince') {
-//         firstCategory=document.getElementById('computer scince');
-//         for (let i = 0; i < books.length; i++) {
-//             computerScinceOpptions=document.createElement('option');
-//            Option.text=this.name;
-//            firstCategory.add(Option);
-//         }
-//     }
-//     else{
-//         console.log(this.name);
-//     }
-// }
-// Book.prototype.rendercategoryOptions();

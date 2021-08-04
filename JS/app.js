@@ -30,19 +30,12 @@ function showSlides(n) {
 }
 
 
-// review
-// let Review = document.getElementById('Review');
-// let userReview = document.createElement('p');
-// Review.appendChild(userReview);
-// console.log(Review);
 let storgeReview = JSON.parse(localStorage.getItem('userfeedback'));
-console.log(storgeReview);
 
 
 function getStorageData() {
 
   let cartItem = JSON.parse(localStorage.getItem('userfeedback'));
-  console.log(cartItem);
   if (cartItem !== null) {
     for (let i = 0; i < cartItem.length; i++) {
       let Review = document.getElementById('Review');
@@ -60,7 +53,6 @@ function getStorageData() {
       let heElement = document.createElement('hr');
       Review.appendChild(heElement);
 
-      console.log(userReview);
     }
 
   }
@@ -68,18 +60,12 @@ function getStorageData() {
 }
 
 
-
-
-
-
 // review
 let Review = document.getElementById('Review');
 let userReview = document.createElement('p');
 Review.appendChild(userReview);
-console.log(Review);
 
 storgeReview = JSON.parse(localStorage.getItem('userfeedback'));
 
-console.log(storgeReview);
 
 getStorageData();

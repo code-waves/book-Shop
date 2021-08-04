@@ -35,7 +35,7 @@ header{
   }
   .navMenu :nth-child(4){
       position: absolute;
-    left: 110%;
+    left: 100%;
   }
 
 body{
@@ -143,8 +143,7 @@ table{
     padding: 1px;
     width: 70%;
     margin-left: 15%;
-    /* background-image: url('https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX2589021.jpg');   */
-} 
+}
 th,td {
     font-family: 'Verdana', sans-serif;
     border-collapse: collapse;
@@ -157,7 +156,7 @@ th{
 }
 td{
     color: rgb(224, 224, 226);
-    font-size: 25px;
+    font-size: 20 px;
     vertical-align: middle;
 }
 img{
