@@ -1,3 +1,7 @@
+*{
+  box-sizing: border-box;
+  font-family: 'Asul', sans-serif;
+}
 header{ 
     height: 170px;
     background-color: #57837B;
@@ -33,7 +37,7 @@ header{
   }
 
 body{
-    background-color: #F1ECC3;
+  background-color: #F1ECC3;
 }
 textarea{
     height: 50px;

@@ -1,3 +1,7 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Asul', sans-serif;
+  }
 body{
     background-color: #F1ECC3;
 }
