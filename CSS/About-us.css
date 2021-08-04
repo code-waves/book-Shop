@@ -70,7 +70,7 @@
   
   .navMenu :nth-child(4){
       position: absolute;
-    left: 110%;
+    left: 100%;
   }
   
   
@@ -101,7 +101,6 @@
   
   
     .img2{
-      /* border-radius: 50%; */
       border: solid;
       margin-top: 20px;
   }

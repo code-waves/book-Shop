@@ -24,22 +24,20 @@ function userReview(event) {
   let feedback = event.target.feedback.value;
   // eslint-disable-next-line new-cap
   let addFeedback = new updateReview(firstName, lastName, age, feedback);
-  console.log(addFeedback);
+ 
   feedbackarr.push(addFeedback);
   localStorage.removeItem('selected books');
   table.textContent = '';
   // eslint-disable-next-line no-undef
   Swal.fire({
-    position: 'top-end',
+    position: 'center',
     icon: 'success',
     title: `Thank you ${firstName + ' ' + lastName} for purchase, The delivery department will contact you `,
     showConfirmButton: false,
     timer: 2000
   });
-  console.log(feedbackarr);
   updateStorge();
 }
-console.log(updateReview.all);
 //Saving from updateReview function
 function updateStorge() {
   let storagearr = JSON.stringify(feedbackarr);
@@ -57,7 +55,7 @@ getData();
 let table = document.getElementById('table');
 function getStorageData() {
   let cartItem = JSON.parse(localStorage.getItem('selected books'));
-  console.log(cartItem);
+   
   if (cartItem !== null) {
     let trhead = document.createElement('tr');
     table.appendChild(trhead);
@@ -77,9 +75,7 @@ function getStorageData() {
     quantityHead.textContent = 'Remove';
     actionHead.textContent = 'Quantity';
     for (let i = 0; i < cartItem.length; i++) {
-      // console.log(cartItem[i]);
-      //   cartItem[i].name;
-      //   console.log('name:',cartItem[i].name);
+      
       let trItem = document.createElement('tr');
       table.appendChild(trItem);
       let thImage1 = document.createElement('td');
@@ -99,12 +95,12 @@ function getStorageData() {
       thButton.appendChild(input);
       input.textContent = 'Clear';
       input.addEventListener('click', clear);
-      
+
       function clear(event) {
-        input.onClick=document.location.reload();
-      
+        input.onClick = document.location.reload();
+
         localStorage.removeItem('selected books');
-      
+
         let selectedItem = cartItem.indexOf(cartItem[i])
         cartItem.splice(selectedItem, 1);
         localStorage.setItem('selected books', JSON.stringify(cartItem));
@@ -112,12 +108,7 @@ function getStorageData() {
 
       let thQuantity = document.createElement('td');
       trItem.appendChild(thQuantity);
-      thQuantity.textContent = 0;
-      for (let j = 0; j < cartItem.length; j++) {
-        if (cartItem[i].name === cartItem[j].name) {
-          thQuantity.textContent++;
-        }
-      }
+      thQuantity.textContent= cartItem[i].quantity;
     }
   }
 }
