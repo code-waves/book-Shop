@@ -1,5 +1,12 @@
+
 * {
-  box-sizing: border-box;
+  
+    box-sizing: border-box;
+    font-family: 'Asul', sans-serif;
+  
+}
+body{
+  background-color: #F1ECC3;
 }
 .navMenu {
   position: absolute;
@@ -44,7 +51,7 @@ main{
 }
 h1{
   text-align: center;
-  color: darkblue;
+  color: #515E63;
 }
 h2{
   color: darkblue;
@@ -53,7 +60,7 @@ h3{
   color: rgb(107, 107, 224);
 }
 h4{
-  color: #F68C1E;
+  color: #FF3F00;
 }
 p{
   color: rgb(233, 231, 231);
@@ -69,13 +76,16 @@ div {
   border: solid #F68C1E 0.2px;
   padding: 30px;
   width: 30%;
-  height: 500px;
+  height: 450px;
   box-shadow: 0 4px 8px 0 #012F6B;
+  background-color:#f1edcefa ;
+  margin-left: 2%;
+  margin-top: 1%;
 }
 button{
   width: 200px;
   height: 50px; 
-  background-color: #012F6B;
+  background-color: #082032;
   color: white;
   font-weight: bold;
   font-size: 15px;
@@ -83,8 +93,13 @@ button{
   border-radius: 30px;
 }
 button:hover {
-  box-shadow: 0 12px 16px 0 red;
-  font-size: 20px;
+  /* box-shadow: 0 12px 16px 0 red;
+  font-size: 20px; */
+  transform:scale(1.1) ;
+  
+   transition-duration: 1s;
+   background-color: blanchedalmond;
+   color: #082032;
 }  
 .html-page-header {
   background-color: #57837B;
@@ -101,7 +116,7 @@ button:hover {
 section{
   float: left;
   text-align: center;
-  margin-left: 60px;
+  margin-left: 220px;
 }
 #label{
   color: darkblue;
@@ -111,13 +126,20 @@ section{
 #in1{
   width: 100px;
   height: 30px; 
-  background-color: #F68C1E;
   color: white;
   font-weight: bold;
   font-size: 15px;
   border: none;
-  border-radius: 10px;
+  border-radius: 10px; 
+  background-color: #082032;
 }
+#in1:hover {
+  transform:scale(1.1) ;
+  
+   transition-duration: 1s;
+   background-color: blanchedalmond;
+   color: #082032;
+} 
 #in3{
   height: 28px; 
   width: 180px;
@@ -131,17 +153,22 @@ section{
    border-radius: 30px;
 }
 #Price{
-  height: 28px; 
-  width: 180px;
+  height: 38px; 
+  width: 200px;
   border:solid #F68C1E 1px;
-  background-color: palegoldenrod;
-  
+  border-radius: 15px;
+  background-color: #57837B;
+  color: #F1ECC3;
+  font-size: 16px;
 }
 #list{
-  height: 28px; 
-  width: 180px;
+  height: 38px; 
+  width: 200px;
   border:solid #F68C1E 1px;
-  background-color: palegoldenrod;
+  border-radius: 15px;
+  background-color: #57837B;
+  color: #F1ECC3;
+  font-size: 16px;
 }
 #Catagory{
   height: 28px; 

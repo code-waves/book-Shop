@@ -50,11 +50,15 @@ function getStorageData() {
       Review.appendChild(userReview);
       userReview.textContent = cartItem[i].firstName + '  ' + cartItem[i].lastName;
 
+      let Elbrement = document.createElement('br');
+      Review.appendChild(Elbrement);
+
       let feedback = document.createElement('p');
       Review.appendChild(feedback);
       feedback.textContent = cartItem[i].feedback;
 
-
+      let heElement = document.createElement('hr');
+      Review.appendChild(heElement);
 
       console.log(userReview);
     }

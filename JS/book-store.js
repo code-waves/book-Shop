@@ -60,7 +60,7 @@ Book.prototype.renderBooks = function () {
   pBookName.textContent = this.name;
   let pBookPrice = document.createElement('h4');
   span.appendChild(pBookPrice);
-  pBookPrice.textContent = this.price;
+  pBookPrice.textContent =`${ this.price} JD` ;
   let pBookdescrption = document.createElement('p');
   span.appendChild(pBookdescrption);
   pBookdescrption.textContent = this.aboutBook;
@@ -133,30 +133,30 @@ function filterSelectionPrice(event) {
 
     //      1 : 
     if (selectedValuePrice === 'Less Than 20 JD') {
-      if (bookprice < 20) {
+      if (Book.allbooks[i].price < 20) {
         // eslint-disable-next-line no-unused-vars
         let spanClass1 = x[i].classList.remove('hide');
       }
-      if (bookprice >= 20 && bookprice <= 40) {
+      if (Book.allbooks[i].price >= 20 && Book.allbooks[i].price <= 40) {
         // eslint-disable-next-line no-unused-vars
         let spanClass2 = x[i].classList.add('hide');
       }
-      if (bookprice > 40) {
+      if (Book.allbooks[i].price > 40) {
         let spanClass3 = x[i].classList.add('hide');
       }
     }
 
     //      2 :       
     else if (selectedValuePrice === '21 - 40 JD') {
-      if (bookprice < 20) {
+      if (Book.allbooks[i].price < 20) {
         let spanClass2 = x[i].classList.add('hide');
         console.log('spanClass2', spanClass2);
       }
-      if (bookprice >= 20 && bookprice <= 40) {
+      if (Book.allbooks[i].price >= 20 && Book.allbooks[i].price <= 40) {
         let spanClass2 = x[i].classList.remove('hide');
         console.log('spanClass2', spanClass2);
       }
-      if (bookprice > 40) {
+      if (Book.allbooks[i].price > 40) {
         let spanClass2 = x[i].classList.add('hide');
         console.log('spanClass2', spanClass2);
       }
@@ -164,15 +164,15 @@ function filterSelectionPrice(event) {
 
     //      3 : 
     else {
-      if (bookprice < 20) {
+      if (Book.allbooks[i].price < 20) {
         let spanClass2 = x[i].classList.add('hide')
         console.log('spanClass2', spanClass2)
       }
-      if (bookprice >= 20 && bookprice <= 40) {
+      if (Book.allbooks[i].price >= 20 && Book.allbooks[i].price <= 40) {
         let spanClass2 = x[i].classList.add('hide')
         console.log('spanClass2', spanClass2)
       }
-      if (bookprice > 40) {
+      if (Book.allbooks[i].price > 40) {
         let spanClass2 = x[i].classList.remove('hide')
         console.log('spanClass2', spanClass2)
       }

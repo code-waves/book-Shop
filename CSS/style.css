@@ -16,7 +16,9 @@ header{
 }
 
 
-
+body{
+  background-color: #F1ECC3;
+}
 
 
 
@@ -50,12 +52,6 @@ header{
   .navMenu a:hover {
     color: #FFA900;
   }
-
-p {
-font-size: 30px;
-color:#334257;
-text-align: center;
-}
 
 nav {
     margin: 0px auto;
@@ -432,7 +428,11 @@ float: left;
      
       
     }
-
+    p {
+      font-size: 30px;
+      color:#001b36;
+      text-align: center;
+      }
 
     #Review{
         width: 40%;
@@ -441,9 +441,10 @@ float: left;
         overflow: auto;
         height: 250px;
         margin-right: 282px;
-        background-color: #bbb;
+        /* background-color: rgba(104, 54, 54, 0.158); */
+        background-image: url('https://png.pngtree.com/thumb_back/fh260/back_our/20190619/ourmid/pngtree-beautiful-white-wood-floor-texture-dried-flower-display-background-material-image_141285.jpg');
         font-size: 30px;
-        
+        border-radius: 20px;
 
       } 
       /* width */
@@ -453,13 +454,14 @@ float: left;
 
 /* Track */
 #Review::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 5px grey; 
+  box-shadow: inset 0 0 5px rgb(71, 65, 65); 
   border-radius: 10px;
+  display: none;
 }
  
 /* Handle */
 #Review::-webkit-scrollbar-thumb {
-  background: red; 
+  background: #515E63; 
   border-radius: 10px;
 }
 
@@ -482,6 +484,4 @@ float: left;
         color: #fff;
         background-color: red;
       } */
-       p{
-        color: #fff;
-      }
+      
