@@ -18,7 +18,7 @@ body{
 }
 .navMenu :nth-child(4){
     position: absolute;
-  left: 90%;
+  left: 110%;
 }
 .navMenu a {
   color: #F1ECC3;
@@ -79,7 +79,7 @@ div {
   height: 450px;
   box-shadow: 0 4px 8px 0 #012F6B;
   background-color:#f1edcefa ;
-  margin-left: 2%;
+  margin-left: 2.5%;
   margin-top: 1%;
 }
 button{
@@ -103,15 +103,17 @@ button:hover {
 }  
 .html-page-header {
   background-color: #57837B;
-  width: 100%;
-  height:190px;
+  width: 101%;
+  height:170px;
   padding: 0px;
-  margin: 0px;
+  margin: -8px;
 }
 .blueLogo{
   margin-left: 20px;
   margin-top: 20px;
   border: none;
+  height: 140px;
+    width: 150px;
 }
 section{
   float: left;
@@ -194,12 +196,18 @@ clear: both;
     position: relative;
     margin-top: 200px;
 }
+#orimage > img{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  
+}
 .mapouter {
   float: right;
   margin-right:5%;
   margin-top: 20px;
-   /* height: 300px;
-   width: 500px;  */
+  margin-right: 1%;
+   
 }
 /* .gmap_canvas {
           overflow: hidden;
@@ -214,6 +222,7 @@ clear: both;
 }
 .contactUs{
   color: red;
+  
 }
 .picDiv{
  float: left;
@@ -225,18 +234,24 @@ clear: both;
   height: 50px;
 }
 #order{
-float: left;
-margin-left: 50px;
+/* float: left; */
+margin-left: 38%;
+
+}
+#order> p{
+  font-size: 19px;
 }
 #orimage{
-  float: left;
+  /* float: left; */
+ margin-left: 20%;
 }
 #foot{
   background-color:#515E63;
   margin-top: 200px;
 }
 #copy{
-  color: chocolate;
+  color: white;
   font-size: 25px;
   text-align: center;
+  font-size: 15px;
 }
