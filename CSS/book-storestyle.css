@@ -64,7 +64,7 @@ img{
   height: 170px;
   border: solid black 1px;
 }
-div {
+.boxDiv {
   float: left;
   border: solid #F68C1E 0.2px;
   padding: 30px;

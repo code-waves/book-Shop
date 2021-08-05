@@ -47,6 +47,7 @@ let cartArray = [];
 Book.prototype.renderBooks = function () {
   
   let span = document.createElement('div');
+  span.setAttribute('class','boxDiv');
   main.appendChild(span);
   let imgelement1 = document.createElement('img');
   imgelement1.setAttribute('src', this.src);
@@ -74,7 +75,14 @@ Book.prototype.renderBooks = function () {
   // eslint-disable-next-line no-unused-vars
   function userClick(event) {
 event.preventDefault();
-alert(`${object.name} book added to your cart`);
+Swal.fire({
+  position: 'center',
+  icon: 'success',
+  title: `The ${object.name} book added to the cart `,
+  showConfirmButton: false,
+  timer: 2000
+});
+
   
     if (!cartArray.includes(object) ) {
       cartArray.push(object);

@@ -24,7 +24,7 @@ function userReview(event) {
   let feedback = event.target.feedback.value;
   // eslint-disable-next-line new-cap
   let addFeedback = new updateReview(firstName, lastName, age, feedback);
- 
+
   feedbackarr.push(addFeedback);
   localStorage.removeItem('selected books');
   table.textContent = '';
@@ -61,7 +61,7 @@ getData();
 let table = document.getElementById('table');
 function getStorageData() {
   let cartItem = JSON.parse(localStorage.getItem('selected books'));
-   
+
   if (cartItem !== null) {
     let trhead = document.createElement('tr');
     table.appendChild(trhead);
@@ -81,7 +81,7 @@ function getStorageData() {
     quantityHead.textContent = 'Remove';
     actionHead.textContent = 'Quantity';
     for (let i = 0; i < cartItem.length; i++) {
-      
+
       let trItem = document.createElement('tr');
       table.appendChild(trItem);
       let thImage1 = document.createElement('td');
@@ -114,7 +114,7 @@ function getStorageData() {
 
       let thQuantity = document.createElement('td');
       trItem.appendChild(thQuantity);
-      thQuantity.textContent= cartItem[i].quantity;
+      thQuantity.textContent = cartItem[i].quantity;
     }
   }
 }

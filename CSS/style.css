@@ -280,9 +280,10 @@ margin: 80px auto;
     transform: translateY(200%);
     text-align: center;
     padding: 15px;
-    color: #fff;
+    color: rgb(16, 16, 51);
     font-size: larger;
     top: 30px;
+    font-weight: 900;
 }
 .buttonHover{
     width: 150px;
