@@ -1,478 +1,442 @@
-*{
-    box-sizing: border-box;
-    font-family: 'Asul', sans-serif;
+* {
+  box-sizing: border-box;
+  font-family: 'Asul', sans-serif;
 }
 
-header{
-    
-   
-    height: 100vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.4),rgba(47, 0, 255, 0.5)),url(../pic/Library2.png);
-    background-position: center;
-    background-size: cover;
-    
+header {
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(47, 0, 255, 0.5)), url(../pic/Library2.png);
+  background-position: center;
+  background-size: cover;
 }
 
-
-body{
+body {
   background-color: #F1ECC3;
 }
 
-
-
-.blueLogo{
-    margin-left: 20px;
-    margin-top: 20px;
-    border: none;
-    height: 140px;
-    width: 150px;
+.blueLogo {
+  margin-left: 20px;
+  margin-top: 20px;
+  border: none;
+  height: 140px;
+  width: 150px;
 }
+
 .navMenu {
-    position: absolute;
-    top: 10%;
-    left: 40%;
-    width: 50%;
-    
-  }
-  /* .navMenu:nth-child(2){
+  position: absolute;
+  top: 10%;
+  left: 40%;
+  width: 50%;
+}
+
+/* .navMenu:nth-child(2){
     margin-right: 90px;
     padding-right :100px;
   }
    */
-  .navMenu a {
-    color: whitesmoke;
-    font-family: cursive;
-    text-decoration: none;
-    font-size: 1 em;
-    text-transform: uppercase;
-    font-weight: 500;
-    display: inline-block;
-    width: 120px;
-    margin-right: 20px;
-  }
-  .navMenu:nth-child(3){
-margin-left: 100px;
 
-  }
-  .navMenu a:hover {
-    color: #FFA900;
-  }
+.navMenu a {
+  color: whitesmoke;
+  font-family: cursive;
+  text-decoration: none;
+  font-size: 1 em;
+  text-transform: uppercase;
+  font-weight: 500;
+  display: inline-block;
+  width: 120px;
+  margin-right: 20px;
+}
+
+.navMenu:nth-child(3) {
+  margin-left: 100px;
+}
+
+.navMenu a:hover {
+  color: #FFA900;
+}
 
 nav {
-    margin: 0px auto;
-    width: 1500px;
-    height: 100px;
-    color: #334257;
-    
-    
-    
+  margin: 0px auto;
+  width: 1500px;
+  height: 100px;
+  color: #334257;
 }
-#feedback{
+
+#feedback {
   color: black;
   font-size: 40px;
-margin-left: 5%;
-font-weight: bolder;
-
+  margin-left: 5%;
+  font-weight: bolder;
 }
 
 nav img {
-    margin-right: 30px;
-    float: left;
-    
+  margin-right: 30px;
+  float: left;
 }
 
 nav li {
-    margin-top: 45px;
-    margin-right: 70px;
-    float: right;
-    vertical-align: middle;
-
+  margin-top: 45px;
+  margin-right: 70px;
+  float: right;
+  vertical-align: middle;
 }
-
 
 a {
-    text-decoration: none;
-    color:#334257;
-    font-size: large;
+  text-decoration: none;
+  color: #334257;
+  font-size: large;
 }
 
-
-
-.mainPageHeading{
-    color: white;
-    position: absolute;
-    top:45%;
-    left:26%;
-    font-size: 60px;
-    font-weight: bold;
-
+.mainPageHeading {
+  color: white;
+  position: absolute;
+  top: 45%;
+  left: 26%;
+  font-size: 60px;
+  font-weight: bold;
 }
-h2{
-    color: white;
-    position: absolute;
-    top: 60%;
-    left: 30%;
-    font-size: 25px;
-    font-weight: bold;
-    
+
+h2 {
+  color: white;
+  position: absolute;
+  top: 60%;
+  left: 30%;
+  font-size: 25px;
+  font-weight: bold;
 }
-.button{
-color: white;
-font-weight: bold;
-background-color:rgb(255, 72, 0) ;
-position:absolute ;
-top: 67%;
-left: 44%;
-width: 10%;
-height: 7%;
-border-radius: 4px;
+
+.button {
+  color: white;
+  font-weight: bold;
+  background-color: rgb(255, 72, 0);
+  position: absolute;
+  top: 67%;
+  left: 44%;
+  width: 10%;
+  height: 7%;
+  border-radius: 4px;
 }
 
 .button span {
-    cursor: pointer;
-    display: inline-block;
-    position: relative;
-    transition: 0.5s;
-  }
-  .button span:after {
-    content: '\00bb';
-    position: absolute;
-    opacity: 0;
-    top: 0;
-    right: -20px;
-    transition: 0.5s;
-  }
-  .button:hover span {
-    padding-right: 25px;
-  }
-  
-  .button:hover span:after {
-    opacity: 1;
-    right: 0;
-  }
-
-
-a{
-    text-decoration: none;
-    color: white;
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
 }
 
-
-.secondPart{
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    height: 400px;
-
-
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
 }
 
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.secondPart {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 400px;
+}
 
 .paragrahBox {
-
-color: black;
-flex-basis: 40%;
-border-color: black;
-background-color:rgba(230, 224, 208, 0.747) ;
-
-padding: 10px 10px;
-transition: 0.5s;
-margin: 1%;
-margin-bottom: -1%;
-width: 100%;
-text-align: center;
-margin-right: 10px;
-
-
+  color: black;
+  flex-basis: 40%;
+  border-color: black;
+  background-color: rgba(230, 224, 208, 0.747);
+  padding: 10px 10px;
+  transition: 0.5s;
+  margin: 1%;
+  margin-bottom: -1%;
+  width: 100%;
+  text-align: center;
+  margin-right: 10px;
 }
 
-.headingBox{
-    text-align: center;
-    font-weight: 600;
-    font-size: 30px;
-    margin-bottom:40px;
-    margin-top: 40px;
-    width: 100%;
-    display: inline-block;
+.headingBox {
+  text-align: center;
+  font-weight: 600;
+  font-size: 30px;
+  margin-bottom: 40px;
+  margin-top: 40px;
+  width: 100%;
+  display: inline-block;
 }
+
 /* from w3 school */
+
 .paragrahBox:hover {
-    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2)
+  box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2)
 }
 
-.paragrahBox p{
-line-height: 30px;
-text-align: justify;
-font-size: 20px;
+.paragrahBox p {
+  line-height: 30px;
+  text-align: justify;
+  font-size: 20px;
 }
 
-#Categories{
-    color: black;
-    
-    text-align: center;
-    font-weight: 600;
-    font-size: 40px;
-    padding-top: 100px;
+#Categories {
+  color: black;
+  text-align: center;
+  font-weight: 600;
+  font-size: 40px;
+  padding-top: 100px;
 }
 
-
-#container{
-    width: 100%;
-    min-height: 500px;
-display: flex;
-flex-direction: row;
-flex-wrap: wrap;
-
-margin: 80px auto;
-
-
-
+#container {
+  width: 100%;
+  min-height: 500px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 80px auto;
 }
 
-
-
-
-#container .box{
-    position: relative;
-    width:500px ;
-    height:500px ;
-    display: inline-block;
-    margin-left: 6px;
+#container .box {
+  position: relative;
+  width: 500px;
+  height: 500px;
+  display: inline-block;
+  margin-left: 6px;
 }
 
-#container .box .imageBox{
-    position: relative;
-    overflow: hidden;
-
- 
+#container .box .imageBox {
+  position: relative;
+  overflow: hidden;
 }
 
-#container .box .imageBox img{
-    width: 500px;
-    height: 500px;
-    
-    
+#container .box .imageBox img {
+  width: 500px;
+  height: 500px;
 }
 
-#container .box:hover .imageBox img{
-
-    transform: scale(1.2);
-    transition: 1s;
+#container .box:hover .imageBox img {
+  transform: scale(1.2);
+  transition: 1s;
 }
 
-#container .box .deatiles{
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    bottom: 0px;
-    right: 0px;
-    background: linear-gradient(rgba(255, 196, 0, 0.8),rgba(47, 0, 255, 0.3));
-    transform: scaleY(0);
-    transition: 1s;
-    
-}
-#container .box:hover .deatiles{
-    transform: scaleY(1);
+#container .box .deatiles {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  right: 0px;
+  background: linear-gradient(rgba(255, 196, 0, 0.8), rgba(47, 0, 255, 0.3));
+  transform: scaleY(0);
+  transition: 1s;
 }
 
-#container .box .deatiles .content{
-    position: absolute;
-    transform: translateY(200%);
-    text-align: center;
-    padding: 15px;
-    color: rgb(16, 16, 51);
-    font-size: larger;
-    top: 30px;
-    font-weight: 900;
-}
-.buttonHover{
-    width: 150px;
-    height: 50px;
-    position: absolute;
-    top: 50%;
-    left: 35%;
-    background: linear-gradient(rgba(251, 255, 0, 0.6),rgba(47, 0, 255, 0.9));
+#container .box:hover .deatiles {
+  transform: scaleY(1);
 }
 
+#container .box .deatiles .content {
+  position: absolute;
+  transform: translateY(200%);
+  text-align: center;
+  padding: 15px;
+  color: rgb(16, 16, 51);
+  font-size: larger;
+  top: 30px;
+  font-weight: 900;
+}
 
+.buttonHover {
+  width: 150px;
+  height: 50px;
+  position: absolute;
+  top: 50%;
+  left: 35%;
+  background: linear-gradient(rgba(251, 255, 0, 0.6), rgba(47, 0, 255, 0.9));
+}
 
 footer {
-
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height:300px;
-    background-color:#515E63;
-    color: white;
-    text-align: center;
-    padding-top: 50px;
- display: inline-block;
- position: relative;  
-   
-
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 300px;
+  background-color: #515E63;
+  color: white;
+  text-align: center;
+  padding-top: 50px;
+  display: inline-block;
+  position: relative;
 }
-.gmap_canvas {
-            overflow: hidden;
-            background: none !important;
-            height: 250px;
-            width: 250px;
-     position: absolute;
-    
-     padding-top:33px ;
-        }
-        .mapouter {
-        
-            text-align: right;
-            height: 300px;
-            width: 300px;
-            position: absolute;
-     right: 20px;
-     bottom: 20px;
-        }
 
+.gmap_canvas {
+  overflow: hidden;
+  background: none !important;
+  height: 250px;
+  width: 250px;
+  position: absolute;
+  padding-top: 33px;
+}
+
+.mapouter {
+  text-align: right;
+  height: 300px;
+  width: 300px;
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+}
 
 .cur {
-    cursor: pointer;
+  cursor: pointer;
 }
-.cur > img{
+
+.cur>img {
   width: 40px;
   height: 40px;
   border-radius: 50%;
 }
 
-
-
-
 #slideContainer {
-    width: 80%;
-    position: relative;
-    margin: auto;
-    margin-top: 130px;
-    margin-left: 10%;
-    margin-bottom: 130px;
-  }
-  #sliderDiv>img{
-      width: 100% ;
-      
-      height: 600px;
-      animation-name: fade;
-      animation-duration: 1.1s;
-  }
-  
-  .imgText{
-    position: absolute;
-    left: 48%;
-    top :2%;
-    color: whitesmoke;
-    font-size: larger;
-    font-family:Cursive ;
-  
-    
-  }
-  
-  #prev, #next {
-    position: absolute;
-    top: 43%;
-    width: auto;
-    padding: 16px;
-    color: white;
-    font-weight: bold;
-    font-size: 18px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-  }
-  
-  #next {
-    right: 0;
-    border-radius: 5px 0 0 5px;
-  }
-  
-  #prev:hover, #next:hover {
-    background-color: rgba(0, 0, 0, 0.514);
-    color: #ffffff;
-  }
-  
-  
-  
-  .dot {
-    height: 15px;
-    width: 15px;
-    margin: 0 2px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
-  }
-  
-  .active, .dot:hover {
-    background-color: #501111;
-  }
-  
-    
-    
-    @keyframes fade {
-      from {opacity: .6} 
-      to {opacity: 1}
-     
-      
-    }
-    p {
-      font-size: 30px;
-      color:#001b36;
-      text-align: center;
-      }
+  width: 80%;
+  position: relative;
+  margin: auto;
+  margin-top: 130px;
+  margin-left: 10%;
+  margin-bottom: 130px;
+}
 
-    #Review{
-        width: 40%;
-        margin-left: 33%;
-        padding-left: 0px;
-        overflow: auto;
-        height: 250px;
-        margin-right: 282px;
-        background-image: url('https://png.pngtree.com/thumb_back/fh260/back_our/20190619/ourmid/pngtree-beautiful-white-wood-floor-texture-dried-flower-display-background-material-image_141285.jpg');
-        font-size: 30px;
-        border-radius: 20px;
-margin-bottom: 30px;
-      } 
- #Review:hover{
-   transform: scale(1.1);
-box-shadow: 0px 30px 30px 0px rgb(0, 0, 0);
-   transition-duration: 1s;
-  
- }
-      /* width */
+#sliderDiv>img {
+  width: 100%;
+  height: 600px;
+  animation-name: fade;
+  animation-duration: 1.1s;
+}
+
+.imgText {
+  position: absolute;
+  left: 48%;
+  top: 2%;
+  color: whitesmoke;
+  font-size: larger;
+  font-family: Cursive;
+}
+
+#prev, #next {
+  position: absolute;
+  top: 43%;
+  width: auto;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+#next {
+  right: 0;
+  border-radius: 5px 0 0 5px;
+}
+
+#prev:hover, #next:hover {
+  background-color: rgba(0, 0, 0, 0.514);
+  color: #ffffff;
+}
+
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #501111;
+}
+
+@keyframes fade {
+  from {
+    opacity: .6
+  }
+  to {
+    opacity: 1
+  }
+}
+
+p {
+  font-size: 30px;
+  color: #001b36;
+  text-align: center;
+}
+
+#Review {
+  width: 40%;
+  margin-left: 33%;
+  padding-left: 0px;
+  overflow: auto;
+  height: 250px;
+  margin-right: 282px;
+  background-image: url('https://png.pngtree.com/thumb_back/fh260/back_our/20190619/ourmid/pngtree-beautiful-white-wood-floor-texture-dried-flower-display-background-material-image_141285.jpg');
+  font-size: 30px;
+  border-radius: 20px;
+  margin-bottom: 30px;
+}
+
+#Review:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 30px 30px 0px rgb(0, 0, 0);
+  transition-duration: 1s;
+}
+
+/* width */
+
 #Review::-webkit-scrollbar {
   width: 20px;
 }
 
 /* Track */
+
 #Review::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 5px rgb(71, 65, 65); 
+  box-shadow: inset 0 0 5px rgb(71, 65, 65);
   border-radius: 10px;
   display: none;
 }
- 
+
 /* Handle */
+
 #Review::-webkit-scrollbar-thumb {
-  background: #515E63; 
+  background: #515E63;
   border-radius: 10px;
 }
 
 /* Handle on hover */
-#Review::-webkit-scrollbar-thumb:hover {
-  background: #b30000; 
-}
-      .contactUs{
-        font-size: 20px;
-      }
 
-      .boxDetails{
-        font-size: 30px;
-        text-align: center;
-        color: #fff;
-        font-weight: bold;
-        margin-top: 20%;
-      }
-      
-      
+#Review::-webkit-scrollbar-thumb:hover {
+  background: #b30000;
+}
+
+.contactUs {
+  font-size: 20px;
+}
+
+.boxDetails {
+  font-size: 30px;
+  text-align: center;
+  color: #fff;
+  font-weight: bold;
+  margin-top: 20%;
+}
